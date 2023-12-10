@@ -1,28 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexandre Alves</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap">
     <style>
-        body {
-            font-family: 'Playfair Display', serif;
-            background-color: #836953;
-            color: #F5F5F5;
-            padding: 20px;
+        .pc-content {
+            display: none;
         }
-
-        h1, h2, h3, h4, h5, h6 {
-            margin-bottom: 20px;
+        .phone-content {
+            display: none;
         }
     </style>
+    <script>
+        // Check if the device is a PC or a phone
+        var isPC = navigator.userAgent.match(/(Windows|Macintosh)/i);
+        var isPhone = navigator.userAgent.match(/(iPhone|Android)/i);
+
+        // Show the appropriate content based on the device
+        window.onload = function() {
+            if (isPC) {
+                document.querySelector('.pc-content').style.display = 'block';
+            } else if (isPhone) {
+                document.querySelector('.phone-content').style.display = 'block';
+            }
+        };
+    </script>
 </head>
 <body>
-    <h1>Hi, my name is Alex!</h1>
-    <p>This is my personal page.</p>
-    <p>This is a work in progress</p>
-    <p>To keep you entertained heres a gif of a monkey</p>
-    <img src="https://i.pinimg.com/originals/a1/69/52/a16952009fc4945159ba13ce9858c225.gif" alt="Animated GIF">
+    <div class="pc-content">
+        <!-- PC content goes here -->
+        <h1>This is the PC version</h1>
+        <h1>Hi, my name is Alex!</h1>
+            <p>This is my personal page.</p>
+            <p></p>
+            <h2>About me...</h2>
+                <h3>I'll try to keep it simple!</h3>
+                    <h4>Personality wise:</h4>
+                        <p>
+                            I would say I'm and extrovert, but only once I know people<br>
+                            I'm a complete nerd for:
+                            <ul>
+                                <li>history (specially Roman and Greek history)</li>
+                                <li>star wars</li>
+                                <li>cinema in general</li>
+                                <li>music</li>
+                            </ul>
+                            I really enjoy philosophy<br>
+                        </p>
+                    <h4>Some of my skills:</h4>
+                        <p>
+                            I'm studying Data Science (currently in my third and last year) at ISCTE in Lisbon<br>
+                            I know how to speak Portuguese and English like a native and a bit of French<br>
+                        </p>
+                    <h4>Work wise:</h4>
+                        <p>
+                            Everyone loves to say they are hard workers (and I do too...)<br>
+                            I'm a good problem solver and enjoy working with other people<br>
+                            I'm used to work in Python and R, but I also have base knowledge SQL and HTML<br>
+                        </p>
+    </div>
+    <div class="phone-content">
+        <!-- Phone content goes here -->
+        <h1>This is the phone version</h1>
+        <h1>Hi, my name is Alex!</h1>
+            <p>This is my personal page.</p>
+            <p></p>
+            <h2>About me...</h2>
+                <h3>I'll try to keep it simple!</h3>
+                    <h4>Personality wise:</h4>
+                        <p>
+                            I would say I'm and extrovert, but only once I know people<br>
+                            I'm a complete nerd for:
+                            <ul>
+                                <li>history (specially Roman and Greek history)</li>
+                                <li>star wars</li>
+                                <li>cinema in general</li>
+                                <li>music</li>
+                            </ul>
+                            I really enjoy philosophy<br>
+                        </p>
+                    <h4>Some of my skills:</h4>
+                        <p>
+                            I'm studying Data Science (currently in my third and last year) at ISCTE in Lisbon<br>
+                            I know how to speak Portuguese and English like a native and a bit of French<br>
+                        </p>
+                    <h4>Work wise:</h4>
+                        <p>
+                            Everyone loves to say they are hard workers (and I do too...)<br>
+                            I'm a good problem solver and enjoy working with other people<br>
+                            I'm used to work in Python and R, but I also have base knowledge SQL and HTML<br>
+                        </p>
+    </div>
 </body>
 </html>
