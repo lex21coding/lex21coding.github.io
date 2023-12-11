@@ -1,161 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexandre Alves</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap">
     <style>
-        .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0; /* Add this line to make the header span the full width */
-        background-image: url('https://th.bing.com/th/id/R.a685be51bf131a445ab571fd873f4322?rik=PWeGiEJLy5wOjA&pid=ImgRaw&r=0');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100px; /* Adjust the height as needed */
-        display: flex; /* Add this line to make the header horizontal */
-        align-items: center; /* Add this line to vertically center the content */
-        justify-content: space-between; /* Add this line to evenly distribute the content */
-        padding: 0 20px; /* Add this line to add some spacing around the content */
-        }
-
-        .header h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-            color: #F5F5F5;
-            font-family: 'Playfair Display', serif;
-            font-family: 'Playfair Display', serif;
-            background-color: none;
-            color: #F5F5F5;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .pc-content {
-            display: none;
-        }
-        .phone-content {
-            display: none;
-        }
         body {
             font-family: 'Playfair Display', serif;
             background-color: #836953;
             color: #F5F5F5;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+            padding: 20px;
         }
 
         h1, h2, h3, h4, h5, h6 {
             margin-bottom: 20px;
         }
-
-        body {
-        margin: 0;
-    }
-
-    h1 {
-        margin: 0;
-    }
-    }
     </style>
-    <script>
-        // Check if the device is a PC or a phone
-        var isPC = navigator.userAgent.match(/(Windows|Macintosh)/i);
-        var isPhone = navigator.userAgent.match(/(iPhone|Android)/i);
-
-        // Show the appropriate content based on the device
-        window.onload = function() {
-            if (isPC) {
-                document.querySelector('.pc-content').style.display = 'block';
-            } else if (isPhone) {
-                document.querySelector('.phone-content').style.display = 'block';
-            }
-        };
-
-        // Update background image position on scroll
-        window.addEventListener('scroll', function() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var backgroundOffset = scrollTop * 0.5; // Adjust the scroll speed here
-            document.querySelector('.header').style.backgroundPositionY = -backgroundOffset + 'px';
-        });
-    </script>
+</head>
 <body>
-    <div class="header">
-        <h1>This is the PC version</h1>
-    </div>
-    <div class="pc-content">
-        <!-- PC content goes here -->
-        <h1>Hi, my name is Alex!</h1>
-            <p>This is my personal page.</p>
-            <p></p>
-                <h2>About me...</h2>
-                    <h3>I'll try to keep it simple!</h3>
-                        <h4>Personality wise:</h4>
-                            <p>
-                            I would say I'm and extrovert, but only once I know people<br>
-                            I'm a complete nerd for:<br><br>
-
-                            history (specially Roman and Greek history)<br>
-                            star wars<br>
-                            cinema in general<br>
-                            music<br><br>
-
-                            I really enjoy philosophy<br>
-                            </p>
-                        <h4>Some of my skills:</h4>
-                        <p>
-                            I'm studying Data Science (currently in my third and last year) at ISCTE in Lisbon<br>
-                            I know how to speak Portuguese and English like a native and a bit of French<br>
-                        </p>
-                        <h4>Work wise:</h4>
-                        <p>
-                            Everyone loves to say they are hard workers (and I do too...)<br>
-                            I'm a good problem solver and enjoy working with other people<br>
-                            I'm used to work in Python and R, but I also have base knowledge SQL and HTML<br>
-                        </p>
-            </div>
-    <div class="phone-content">
-        <!-- Phone content goes here -->
-        <h1>This is the PC version</h1>
-        <h1>Hi, my name is Alex!</h1>
-            <p>This is my personal page.</p>
-            <p></p>
-                <h2>About me...</h2>
-                    <h3>I'll try to keep it simple!</h3>
-                        <h4>Personality wise:</h4>
-                            <p>
-                            I would say I'm and extrovert, but only once I know people<br>
-                            I'm a complete nerd for:<br><br>
-
-                            history (specially Roman and Greek history)<br>
-                            star wars<br>
-                            cinema in general<br>
-                            music<br><br>
-
-                            I really enjoy philosophy<br>
-                            </p>
-                        <h4>Some of my skills:</h4>
-                        <p>
-                            I'm studying Data Science (currently in my third and last year) at ISCTE in Lisbon<br>
-                            I know how to speak Portuguese and English like a native and a bit of French<br>
-                        </p>
-                        <h4>Work wise:</h4>
-                        <p>
-                            Everyone loves to say they are hard workers (and I do too...)<br>
-                            I'm a good problem solver and enjoy working with other people<br>
-                            I'm used to work in Python and R, but I also have base knowledge SQL and HTML<br>
-                        </p>
-    </div>
+    <h1>Hi, my name is Alex!</h1>
+    <p>This is my personal page.</p>
+    <p>This is a work in progress</p>
+    <p>To keep you entertained heres a gif of a monkey</p>
+    <img src="https://i.pinimg.com/originals/a1/69/52/a16952009fc4945159ba13ce9858c225.gif" alt="Animated GIF">
 </body>
 </html>
